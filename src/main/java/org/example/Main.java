@@ -11,8 +11,8 @@ public class Main {
                 .setCity("Сидней")
                 .build();
         Person son = mom.newChildBuilder()
-                        .setName("Оля")
-                                .build();
+                .setName("Оля")
+                .build();
 
         System.out.println("У " + mom + " есть дочь " + son);
 
@@ -22,10 +22,11 @@ public class Main {
         } catch (IllegalStateException e) {
             e.printStackTrace();
         }
-         try {
-             new PersonBuilder().setAge(-100).build();
-         } catch (IllegalArgumentException e) {e.printStackTrace();}
-
+        try {
+            new PersonBuilder().setAge(-100).build();
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
 
 
     }
