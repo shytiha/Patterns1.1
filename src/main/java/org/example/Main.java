@@ -15,8 +15,7 @@ public class Main {
                 .build();
 
         System.out.println("У " + mom + " есть дочь " + son);
-
-
+        System.out.println(son.getAge());
         try {
             new PersonBuilder().build();
         } catch (IllegalStateException e) {

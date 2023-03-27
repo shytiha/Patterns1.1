@@ -1,7 +1,7 @@
 package org.example;
 
 import java.util.Objects;
-import java.util.Optional;
+
 import java.util.OptionalInt;
 
 public class Person {
@@ -45,6 +45,7 @@ public class Person {
     }
 
     public OptionalInt getAge() {
+        if (age == 0) {return OptionalInt.empty();}
         return OptionalInt.of(age);
     }
 
@@ -67,6 +68,8 @@ public class Person {
 
     @Override
     public String toString() {
+        if (age == 0) {
+        return "Name " + name + " Surname " + surname + " Age " + "EMPTY" + " City " + city;}
         return "Name " + name + " Surname " + surname + " Age " + age + " City " + city;
     }
 
