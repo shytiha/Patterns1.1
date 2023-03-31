@@ -45,7 +45,9 @@ public class Person {
     }
 
     public OptionalInt getAge() {
-        if (age == 0) {return OptionalInt.empty();}
+        if (age == 0) {
+            return OptionalInt.empty();
+        }
         return OptionalInt.of(age);
     }
 
@@ -59,7 +61,9 @@ public class Person {
     }
 
     public void happyBirthday() {
-        if (hasAge()) age++;
+        if (hasAge()) {
+            age++;
+        }
     }
 
     public PersonBuilder newChildBuilder() {
@@ -69,7 +73,8 @@ public class Person {
     @Override
     public String toString() {
         if (age == 0) {
-        return "Name " + name + " Surname " + surname + " Age " + "EMPTY" + " City " + city;}
+            return "Name " + name + " Surname " + surname + " Age " + "EMPTY" + " City " + city;
+        }
         return "Name " + name + " Surname " + surname + " Age " + age + " City " + city;
     }
 

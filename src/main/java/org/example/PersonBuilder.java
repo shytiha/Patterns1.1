@@ -12,21 +12,27 @@ public class PersonBuilder {
     public PersonBuilder setName(String name) throws IllegalArgumentException {
         if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Не указано имя");
-        } else this.name = name;
+        } else {
+            this.name = name;
+        }
         return this;
     }
 
     public PersonBuilder setSurname(String surname) throws IllegalArgumentException {
         if (surname == null || surname.isEmpty()) {
             throw new IllegalArgumentException("Не указана фамилия");
-        } else this.surname = surname;
+        } else {
+            this.surname = surname;
+        }
         return this;
     }
 
     public PersonBuilder setAge(int age) throws IllegalArgumentException {
         if (age < 0) {
             throw new IllegalArgumentException("Возраст не может быть отрицательным");
-        } else this.age = age;
+        } else {
+            this.age = age;
+        }
         return this;
     }
 
@@ -41,7 +47,9 @@ public class PersonBuilder {
             throw new IllegalStateException("Имя или Фамилия не определены");
         if (age < 0) {
             person = new Person(name, surname);
-        } else person = new Person(name, surname, age);
+        } else {
+            person = new Person(name, surname, age);
+        }
         person.setCity(city);
         return person;
     }
